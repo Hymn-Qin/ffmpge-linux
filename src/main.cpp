@@ -11,12 +11,12 @@ extern "C" {
 #endif //__cplusplus
 
 int main(int argc, char *argv[]) {
-  // QApplication a(argc, argv);
+    // QApplication a(argc, argv);
 
-  printf("Hello FFMPEG, version is %s\n", av_version_info());
+    printf("Hello FFMPEG, version is %s\n", av_version_info());
 
-  // MainWindow w;
-  // w.show();
-  // return a.exec();
-  return 0;
+    // MainWindow w;
+    // w.show();
+    // return a.exec();
+    return 0;
 }
