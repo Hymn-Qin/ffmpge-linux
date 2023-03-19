@@ -1,6 +1,8 @@
 #include "mainwindow.h"
 
 #include <QApplication>
+#include <qfont.h>
+#include <qfontdatabase.h>
 
 // C++ 引入 ffmpeg
 #ifdef __cplusplus
@@ -11,12 +13,15 @@ extern "C" {
 #endif //__cplusplus
 
 int main(int argc, char *argv[]) {
-    // QApplication a(argc, argv);
+    QApplication a(argc, argv);
 
-    printf("Hello FFMPEG, version is %s\n", av_version_info());
+    QFontDatabase::addApplicationFont(
+        ":/font/resource/fontawesome-webfont.ttf");
 
-    // MainWindow w;
-    // w.show();
-    // return a.exec();
-    return 0;
+    printf("Hello FFMPEG 欢迎, version is %s\n", av_version_info());
+
+    MainWindow w;
+    w.show();
+    return a.exec();
+    // return 0;
 }
